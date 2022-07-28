@@ -3,7 +3,7 @@ import { styled } from '@mui/system'
 
 const Wrapper = styled('div')({
   height: '10vh',
-  backgroundColor: '#444',
+  backgroundColor: '#3a3a3a',
   padding: '2vh 25px',
 })
 
