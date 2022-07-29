@@ -1,4 +1,5 @@
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined'
+import { Typography } from '@mui/material'
 import { styled } from '@mui/system'
 import Link from 'next/link'
 import { NextRouter, useRouter } from 'next/router'
@@ -26,7 +27,7 @@ const Wrapper = styled('div')({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  '& > span': {
+  '& > div': {
     marginLeft: '15px',
   },
 })
@@ -41,7 +42,9 @@ const MenuItem = memo(({ text, icon, href }: MenuItemProps) => {
       <Item sx={{ bgcolor: active ? '#3a3a3a' : '#444' }}>
         <Wrapper style={{ width: '80%' }}>
           {icon}
-          <span>{text}</span>
+          <Typography variant="h6" component="div">
+            {text}
+          </Typography>
         </Wrapper>
         <Wrapper style={{ width: '20%' }}>
           {active && (
