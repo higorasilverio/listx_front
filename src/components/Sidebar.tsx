@@ -6,10 +6,10 @@ import MenuItem from './MenuItem'
 
 const Sidebar = () => (
   <Box sx={{ height: '100vh', bgcolor: '#444' }}>
-    <Grid xs={12}>
+    <Grid item xs={12}>
       <Logo />
     </Grid>
-    <Grid xs={12}>
+    <Grid item xs={12}>
       <MenuItem text="Lists" icon={<ListAltOutlinedIcon />} href="/" />
       <MenuItem text="New" icon={<PostAddOutlinedIcon />} href="/new" />
     </Grid>

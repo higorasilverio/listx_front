@@ -42,15 +42,6 @@ const InfoWrapper = styled(Box)({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  minWidth: '8rem',
-})
-
-const StyledBadge = styled(Badge)({
-  '& .MuiBadge-badge': {
-    right: -6,
-    top: 3,
-    padding: '0 4px',
-  },
 })
 
 const ListUnit = ({
@@ -64,9 +55,11 @@ const ListUnit = ({
     <Link href="/" passHref>
       <Wrapper elevation={3}>
         <InfoWrapper>
-          <Badge badgeContent={itemCount} color="warning">
-            <LocalGroceryStoreOutlinedIcon />
-          </Badge>
+          <Box sx={{ minWidth: '5rem' }}>
+            <Badge badgeContent={itemCount} color="warning">
+              <LocalGroceryStoreOutlinedIcon />
+            </Badge>
+          </Box>
           <Typography variant="h6">{listName}</Typography>
         </InfoWrapper>
         <Grid>

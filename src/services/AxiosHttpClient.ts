@@ -5,7 +5,7 @@ export abstract class AxiosHttpClient {
 
   public constructor() {
     this.instance = axios.create({
-      baseURL: 'https://listx-back.herokuapp.com/list'
+      baseURL: 'https://listx-back.herokuapp.com'
     })
   }
 }
