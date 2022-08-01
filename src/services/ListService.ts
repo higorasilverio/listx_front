@@ -8,4 +8,11 @@ export class ListService extends AxiosHttpClient {
 
     return lists
   }
+
+  async createLists(list: List): Promise<List> {
+    const { data } = await this.instance.post('/list', list)
+    const newList: List = new List(data._id, data.name, data.items)
+
+    return newList
+  }
 }
