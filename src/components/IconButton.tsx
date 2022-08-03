@@ -1,5 +1,5 @@
 import { IconButton as MUIconButton, styled } from '@mui/material'
-import { ReactNode } from 'react'
+import { MouseEventHandler, ReactNode } from 'react'
 
 type IconButtonProps = {
   color:
@@ -14,9 +14,15 @@ type IconButtonProps = {
     | undefined
   styleColor: string
   children: ReactNode
+  onClick: MouseEventHandler<HTMLButtonElement>
 }
 
-const IconButton = ({ color, styleColor, children }: IconButtonProps) => {
+const IconButton = ({
+  color,
+  styleColor,
+  children,
+  onClick,
+}: IconButtonProps) => {
   const Wrapper = styled(MUIconButton)({
     border: `1px solid ${styleColor}`,
     backgroundColor: styleColor,
@@ -29,7 +35,11 @@ const IconButton = ({ color, styleColor, children }: IconButtonProps) => {
     },
   })
 
-  return <Wrapper color={color}>{children}</Wrapper>
+  return (
+    <Wrapper onClick={onClick} color={color}>
+      {children}
+    </Wrapper>
+  )
 }
 
 export default IconButton
