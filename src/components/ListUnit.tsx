@@ -63,10 +63,10 @@ const ListUnit = ({
           <Typography variant="h6">{listName}</Typography>
         </InfoWrapper>
         <Grid>
-          <IconButton color="info" styleColor="#0288d1">
+          <IconButton color="info" styleColor="#0288d1" onClick={() => {}}>
             <EditOutlinedIcon sx={{ color: '#fff' }} />
           </IconButton>
-          <IconButton color="error" styleColor="#d32f2f">
+          <IconButton color="error" styleColor="#d32f2f" onClick={() => {}}>
             <DeleteOutlinedIcon sx={{ color: '#fff' }} />
           </IconButton>
         </Grid>
